@@ -30,3 +30,15 @@ img = cv2.rectangle(img, tl, br, (0, 255, 0), 7)
 img = cv2.putText(img, label, tl, cv2.FONT_HERSHEY_COMPLEX, 1, (0, 0, 0), 2)
 plt.imshow(img)
 plt.show()
+
+img.shape
+tl = (result[0]['topleft']['x'], result[0]['topleft']['y'])
+br = (result[0]['bottomright']['x'], result[0]['bottomright']['y'])
+label = result[0]['label']
+
+
+# add the box and label and display it
+img = cv2.rectangle(img, tl, br, (0, 255, 0), 7)
+img = cv2.putText(img, label, tl, cv2.FONT_HERSHEY_COMPLEX, 1, (0, 0, 0), 2)
+plt.imshow(img)
+plt.show()
